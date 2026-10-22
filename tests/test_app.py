@@ -21,9 +21,7 @@ def trained_model(tmp_path_factory):
 
 @pytest.fixture()
 def client():
-    import importlib
     import main
-    importlib.reload(main)
     return main.app.test_client()
 
 
